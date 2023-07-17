@@ -2,7 +2,7 @@
 import random
 number = random.randint(-10000, 10000)
 # print last digit of number
-last_digit = int((str)(number)[-1])  # converting to string
+last_digit = int(str(number)[-1])  # converting to string
 if number < 0:
     last_digit = -last_digit
 if last_digit > 5:
