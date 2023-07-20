@@ -21,11 +21,3 @@ def validate_password(password):
             return False
 
     return has_uppercase and has_lowercase and has_digit
-
-
-print(validate_password("Abc123"))      # Output: True
-print(validate_password("Hello123"))    # Output: True
-print(validate_password("password"))    # Output: False (No uppercase)
-print(validate_password("abcd1234"))    # Output: False (No uppercase)
-print(validate_password("SecurePass"))  # Output: False (No digit)
-print(validate_password("Pass word1"))  # Output: False (Contains space)
