@@ -12,6 +12,3 @@ def fibonacci_sequence(n):
             next_number = sequence[-1] + sequence[-2]
             sequence.append(next_number)
         return sequence
-
-
-print(fibonacci_sequence(10))
