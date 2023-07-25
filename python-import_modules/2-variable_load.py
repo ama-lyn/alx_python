@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 a = 98
 
 if __name__ == "__main__":
