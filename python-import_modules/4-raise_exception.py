@@ -3,4 +3,4 @@ def raise_and_handle_type_exception():
     try:
         x = "string" + 42  # This will cause a TypeError to be raised
     except TypeError as e:
-        print("Exception raised.")
+        print("Exception has been raised")
