@@ -1,6 +1,10 @@
-def raise_and_handle_type_exception():
-    """Raise and handle a TypeError."""
+def raise_exception():
+    """Raise a TypeError."""
+    x = "string" + 42  # This will cause a TypeError to be raised
+
+
+if __name__ == "__main__":
     try:
-        x = "string" + 42  # This will cause a TypeError to be raised
-    except TypeError as e:
+        raise_exception()
+    except TypeError as te:
         print("Exception has been raised")
