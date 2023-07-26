@@ -6,3 +6,5 @@ def print_matrix_integer(matrix=[[]]):
                 print("{:d}".format(num))
             else:
                 print("{:d} ".format(num), end="")
+        if not row:  # If the row is empty, print a new line
+            print()
