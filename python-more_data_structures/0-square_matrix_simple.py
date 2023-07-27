@@ -1,15 +1,13 @@
 #!/usr/bin/python3
 def square_matrix_simple(matrix=[]):
+    new_matrix = []
     if not matrix:
-        print()
+        return new_matrix
 
     for row in matrix:
-        if not row:
-            print()
-            continue
+        new_row = []
+        for num in row:
+            new_row.append(num ** 2)
+        new_matrix.append(new_row)
 
-        for i, num in enumerate(row):
-            if i == len(row) - 1:
-                print("{:d}".format(num**2))
-            else:
-                print("{:d} ".format(num), end="")
+    return new_matrix
