@@ -1,3 +1,9 @@
+"""
+Module 0-square
+This module defines a Square class with a private instance attribute 'size'.
+"""
+
+
 class Square:
 
     """
