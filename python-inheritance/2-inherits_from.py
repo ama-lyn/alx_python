@@ -1,8 +1,6 @@
 """
-This module defines a function that returns True if the object is an 
-instance of aclass that inherited (directly or indirectly) from the 
-specified class; otherwise False. It uses `issubclass()` method for 
-this purpose which checks whether one class is derived.
+This module uses `issubclass()` method for this purpose which checks whether
+one class is derived.
 """
 
 
