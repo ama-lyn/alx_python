@@ -7,8 +7,9 @@ class BaseGeometry:
     '''
     Empty class 
     '''
-    pass
 
+    def __dir__(self):
+        # Get list of all attributes for this instance and exclude __init_subclass__
+        attributes = super().__dir__()
 
-attributes = [attr for attr in dir(
-    BaseGeometry) if attr != '__init_subclass__']
+        return [attribute for attribute in attributes if attribute != '__init_subclass__']
