@@ -12,4 +12,3 @@ class BaseGeometry:
 
 attributes = [attr for attr in dir(
     BaseGeometry) if attr != '__init_subclass__']
-print(attributes)
