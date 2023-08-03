@@ -45,6 +45,11 @@ class Rectangle(BaseGeometry):
 
 
 class Square(Rectangle):
+    '''
+    A class that deifnes the area of a square inheriting
+    properties from class Rectangle.
+    '''
+
     def __init__(self, size):
         self.integer_validator("size", size)
         super().__init__(size, size)
