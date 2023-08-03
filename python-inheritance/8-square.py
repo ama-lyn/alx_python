@@ -1,12 +1,11 @@
 '''
-This module defines a class that raises an Exception with the 
-message area() is not implemented
+This module defines classes for geometry calculations.
 '''
 
 
 class BaseGeometry:
     '''
-    Simple class that raises an exception
+    A base class for geometry calculations.
     '''
 
     def area(self):
@@ -21,12 +20,12 @@ class BaseGeometry:
 
 class Rectangle(BaseGeometry):
     '''
-    This is a simple class to represent a rectangle.
+    A class representing a rectangle.
 
    Attributes:
        width: private attribute.
        height: private attribute.
-       Inherited function-integer_validator
+       Inherited function - integer_validator
     '''
 
     def __init__(self, width, height):
@@ -38,7 +37,7 @@ class Rectangle(BaseGeometry):
         self.__height = height
 
     def area(self):
-        return self.__width*self.__height
+        return self.__width * self.__height
 
     def __str__(self):
         return "[Rectangle] {}/{}".format(self.__width, self.__height)
@@ -46,8 +45,7 @@ class Rectangle(BaseGeometry):
 
 class Square(Rectangle):
     '''
-    A class that deifnes the area of a square inheriting
-    properties from class Rectangle.
+    A class representing a square inheriting properties from class Rectangle.
     '''
 
     def __init__(self, size):
@@ -55,4 +53,4 @@ class Square(Rectangle):
         super().__init__(size, size)
 
     def __str__(self):
-        return "[Rectangle] {}/{}".format(self._Rectangle__width, self._Rectangle__height)
+        return "[Square] {}/{}".format(self._Rectangle__width, self._Rectangle__height)
