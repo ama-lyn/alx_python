@@ -5,7 +5,9 @@ This module is an empty class.
 
 class MyNewClass:
     '''
-    Simple empty class
+    Simple empty class 
+    Contains a function tha excludes the attribute 
+    __init_subclass_ from dir()
     '''
 
     def __dir__(cls) -> None:
