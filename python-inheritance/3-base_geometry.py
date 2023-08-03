@@ -3,7 +3,7 @@ This module is an empty class.
 '''
 
 
-class MyNewClass:
+class BaseGeometry:
     '''
     Simple empty class 
     Contains a function tha excludes the attribute 
