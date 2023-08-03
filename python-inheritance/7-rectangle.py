@@ -20,6 +20,15 @@ class BaseGeometry:
 
 
 class Rectangle(BaseGeometry):
+    '''
+    This is a simple class to represent a rectangle.
+
+   Attributes:
+       width: private attribute.
+       height: private attribute.
+       Inherited function-integer_validator
+    '''
+
     def __init__(self, width, height):
         self.__width = 0
         self.__height = 0
