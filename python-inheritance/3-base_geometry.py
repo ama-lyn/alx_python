@@ -4,6 +4,9 @@ This module is an empty class.
 
 
 class MyNewClass:
+    '''
+    Simple class that raises an exception
+    '''
     def __dir__(cls) -> None:
         # get list of all attributes for this class and exclude __init_subclass
         attributes = super().__dir__()
