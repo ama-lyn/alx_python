@@ -3,13 +3,16 @@ This module is an empty class.
 '''
 
 
-class BaseGeometry:
-    '''
-    Empty class 
-    '''
-
-    def __dir__(self):
-        # Get list of all attributes for this instance and exclude __init_subclass__
+class MyNewClass:
+    def __dir__(cls) -> None:
+        # get list of all attributes for this class and exclude __init_subclass
         attributes = super().__dir__()
 
-        return [attribute for attribute in attributes if attribute != '__init_subclass__']
+        list_to_return = []
+
+        for attr in attributes:
+            if attr != "__init_subclass__":
+                # append this to the list_to_return
+                list_to_return.append(attr)
+
+        return list_to_return
