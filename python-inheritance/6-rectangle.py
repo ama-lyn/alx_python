@@ -42,7 +42,7 @@ class Rectangle(BaseGeometry):
     '''
 
     def __dir__(self):
-        return [attribute for attribute in super().__dir__() if attribute != '__init_subclass__']
+        return [attribute for attribute in super().__dir__() if attribute == '__init_subclass__']
 
     def __init__(self, width, height):
         self.__width = 0
