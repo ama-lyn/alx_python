@@ -4,7 +4,15 @@ message area() is not implemented
 '''
 
 
-class BaseGeometry:
+class BaseMetaClass(type):
+    """
+    overrides.
+    """
+    def __dir__(cls):
+        return [attribute for attribute in super().__dir__() if attribute != '__init_subclass__']
+
+
+class BaseGeometry(metaclass=BaseMetaClass):
     """
    Simple empty class 
     Contains a function tha excludes the attribute 
@@ -32,6 +40,9 @@ class Rectangle(BaseGeometry):
        height: private attribute.
        Inherited function-integer_validator
     '''
+
+    def __dir__(self):
+        return [attribute for attribute in super().__dir__() if attribute != '__init_subclass__']
 
     def __init__(self, width, height):
         self.__width = 0
