@@ -4,15 +4,7 @@ message area() is not implemented
 '''
 
 
-class BaseMetaClass(type):
-    """
-    overrides.
-    """
-    def __dir__(cls):
-        return [attribute for attribute in super().__dir__() if attribute != '__init_subclass__']
-
-
-class BaseGeometry(metaclass=BaseMetaClass):
+class BaseGeometry:
     """
    Simple empty class 
     Contains a function tha excludes the attribute 
