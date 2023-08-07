@@ -104,7 +104,7 @@ class Rectangle(Base):
         return ("[Rectangle] ({}) {}/{} - {}/{}"
                 .format(self.id, self.x, self.y, self.width, self.height))
 
-    def update(self, *args):
+    def update(self, *args, **kwargs):
         """Updates the attributes of this object with new values passed as arguments to this function
         Args:
         *args: Variable length argument list containing attributes in order:
@@ -113,10 +113,17 @@ class Rectangle(Base):
             - 3rd argument: height attribute
             - 4th argument: x attribute
             - 5th argument: y attribute
+        **kwargs: Variable length keyword argument list containing attribute names and values.    
         """
 
         attributes = ['id', 'width', 'height', 'x', 'y']
 
-        for index, value in enumerate(args):
-            if index < len(attributes):
-                setattr(self, attributes[index], value)
+        if args:
+            for index, value in enumerate(args):
+                if index < len(attributes):
+                    setattr(self, attributes[index], value)
+
+        if kwargs:
+            for key, value in kwargs.items():
+                if key in attributes:
+                    setattr(self, key, value)
