@@ -91,9 +91,15 @@ class Rectangle(Base):
         """
         Displays the Rectangle using the '#' character.
         """
+        for _ in range(self.y):
+            print()
         for _ in range(self.height):
+            print(" " * self.x, end="")
             print("#" * self.width)
 
     def __str__(self):
+        '''
+        Returns a string representation of the rectangle
+        '''
         return ("[Rectangle] ({}) {}/{} - {}/{}"
                 .format(self.id, self.x, self.y, self.width, self.height))
