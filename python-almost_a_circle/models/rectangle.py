@@ -6,30 +6,30 @@ from models.base import Base
 
 
 class Rectangle(Base):
-    '''
+    """
     Rectangle class that inherits from Base.
-    '''
+    """
 
     def __init__(self, width, height, x=0, y=0, id=None):
-        '''
+        """
         Initializes a Rectangle instance.
 
-    Args:
-        width (int): The width of the rectangle.
-        height (int): The height of the rectangle.
-        x (int): The x-coordinate of the rectangle.
-        y (int): The y-coordinate of the rectangle.
-        id (int): The unique ID of the rectangle.
-        '''
+        Args:
+            width (int): The width of the rectangle.
+            height (int): The height of the rectangle.
+            x (int): The x-coordinate of the rectangle.
+            y (int): The y-coordinate of the rectangle.
+            id (int): The unique ID of the rectangle.
+        """
         super().__init__(id)
-        self.__width = width
-        self.__height = height
-        self.__x = x
-        self__y = y
+        self.width = width
+        self.height = height
+        self.x = x
+        self.y = y
 
     @property
     def width(self):
-        '''Getter method for width.'''
+        """Getter method for width."""
         return self.__width
 
     @width.setter
@@ -63,6 +63,6 @@ class Rectangle(Base):
         return self.__y
 
     @y.setter
-    def width(self, value):
+    def y(self, value):
         """Setter method for y-coordinate."""
         self.__y = value
