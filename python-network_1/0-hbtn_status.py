@@ -1,5 +1,7 @@
 '''
-Module 
+Module that imports request package and retrieves 
+data from the url and perform some functions on the
+data to get a better understanding of how it works
 '''
 import requests
 
@@ -8,10 +10,8 @@ response = requests.get(url)
 
 
 if response.status_code == 200:
-    data = response.json()  # Assuming the response is in JSON format
     print("Body response:")
-    print("\t- type:", type(data))
-    print("\t- content:", data)
+    print("\t- type:", type(response.text))
+    print("\t- content:", response.text)
 else:
     print("Error:", response.status_code)
- 
