@@ -4,10 +4,18 @@ to the URL and displays the value of the variable X-Request-Id
 in the response header
 '''
 import requests
+import sys
 
-url = "https://alu-intranet.hbtn.io/status"
+if len(sys.argv) != 2:
+    print("Usage: python script_name.py <URL>")
+    sys.exit(1)
+
+url = sys.argv[1]
 response = requests.get(url)
 
 
-if response.status_code == 200:
-    print(response.headers['X-Request-Id'])
+if 'X-Request-Id' in response.headers:
+    request_id = response.headers['X-Request-Id']
+    print(request_id)
+else:
+    print("X-Request-Id header not found in the response.")
