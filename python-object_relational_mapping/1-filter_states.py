@@ -28,8 +28,8 @@ if __name__ == '__main__':
     cursor.execute(
         "SELECT id,name\
         FROM states \
-        WHERE name = '{}'\
-        ORDER BY id ASC".format(sys.argv[4]))
+        WHERE BINARY name LIKE 'N%'\
+        ORDER BY id ASC")
 
     # Fetch all the data according to the query
     states = cursor.fetchall()
