@@ -18,7 +18,7 @@ if __name__ == '__main__':
     cursor = DBconnection.cursor()
 
     # Execute the query
-    cursor.execute("SELECT id,names FROM states ORDER BY id ASC")
+    cursor.execute("SELECT id, name FROM states ORDER BY id ASC")
 
     # Fetch all the data according to the query
     states = cursor.fetchall()
