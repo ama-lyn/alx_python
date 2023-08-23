@@ -33,6 +33,6 @@ if __name__ == '__main__':
     for city in cities:
         print(city)
 
-     # Close the cursor and database connection
+    # Close the cursor and database connection
     cursor.close()
     DBconnection.close()
