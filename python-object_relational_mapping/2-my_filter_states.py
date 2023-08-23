@@ -9,17 +9,23 @@ import MySQLdb
 import sys
 
 if __name__ == '__main__':
+
     username = sys.argv[1]
     password = sys.argv[2]
     database = sys.argv[3]
 
-    DBconnection = MySQLdb.connect(
-        host='localhost', port=3306, user=username, passwd=password, database=database)
+    # Establishing connection to MySQL server
+    DBconnection = MySQLdb.connect(host='localhost', port=3306,
+                                   user=username,
+                                   passwd=password,
+                                   database=database)
 
     cursor = DBconnection.cursor()
 
-    sql_query = "SELECT * FROM states WHERE name={} ORDER BY id ASC".format(
-        sys.argv[4])
+    sql_query = "SELECT id, name \
+             FROM states \
+             WHERE name = '{}' \
+             ORDER BY id ASC".format(sys.argv[4])
 
     # Execute the query with the provided state name
     cursor.execute(sql_query)
