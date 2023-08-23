@@ -35,8 +35,11 @@ if __name__ == '__main__':
     cities = cursor.fetchall()
 
     # Display the results
-    for city in cities:
-        print(city)
+    for index, state in enumerate(states):
+        if (index):
+            print(', ', end="")
+        print(state[0], end="")
+    print()
 
     # Close the cursor and database connection
     cursor.close()
