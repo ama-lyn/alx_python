@@ -22,9 +22,9 @@ if __name__ == '__main__':
 
     cursor = DBconnection.cursor()
 
-    sql_query = "SELECT id, name \
-             FROM states \
-             WHERE name = '{}' \
+    sql_query = "SELECT id, name\
+             FROM states\
+             WHERE BINARY name = '{}'\
              ORDER BY id ASC".format(sys.argv[4])
 
     # Execute the query with the provided state name
