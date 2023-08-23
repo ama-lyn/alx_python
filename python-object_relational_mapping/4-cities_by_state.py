@@ -20,7 +20,10 @@ if __name__ == '__main__':
     cursor = DBconnection.cursor()
 
     # Execute the query
-    cursor.execute("SELECT id, cities FROM states ORDER BY id ASC")
+    cursor.execute(
+        "SELECT cities.id, cities.name, state.name\
+        FROM cities JOIN states ON state_id=states.id\
+        ORDER BY cities.id ASC")
 
     # Fetch all the matching data
     cities = cursor.fetchall()
