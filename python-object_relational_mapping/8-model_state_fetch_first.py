@@ -18,12 +18,14 @@ if __name__ == "__main__":
     Session = sessionmaker(bind=engine)
     session = Session()
 
-    # Query one State objects and order by id
-    states = session.query(State).order_by(State.id).first()
+    # Query one State object and order by id
+    state = session.query(State).order_by(State.id).first()
 
-    # Display the results
-    for state in states:
+    # Display the result if a state is found
+    if state:
         print("{}: {}".format(state.id, state.name))
+    else:
+        print("Nothing")
 
     # Close the session
     session.close()
