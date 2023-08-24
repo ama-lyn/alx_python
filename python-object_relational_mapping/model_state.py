@@ -19,7 +19,8 @@ class State(Base):
     '''
     This is a model class which inherits from Base class
     It defines attributes and relationships between tables
-    The __tablename__ variable specifies what will appear when you print out this object
+    The __tablename__ variable specifies what will appear
+    when you print out this object
     In other words it's the name of our table in the DB
     Atrributes:
         id - unique identity number for each state
