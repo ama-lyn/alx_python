@@ -103,7 +103,7 @@ def number_template_n(n):
         n_int = int(n)
         return render_template('5-number.html', n=n_int)
     except ValueError:
-        return "404", 404
+        return "404 Not Found", 404
 
 
 if __name__ == '__main__':
