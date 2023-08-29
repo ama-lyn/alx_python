@@ -99,7 +99,11 @@ def number_template_n(n):
         str: HTML page with the H1 tag.
     """
 
-    return render_template('5-number.html', n=n)
+    try:
+        n_int = int(n)
+        return render_template('5-number.html', n=n_int)
+    except ValueError:
+        return "404", 404
 
 
 if __name__ == '__main__':
