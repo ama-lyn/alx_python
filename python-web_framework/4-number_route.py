@@ -80,7 +80,10 @@ def number_n(n):
     Returns:
         str: Message "n " is a number.
     """
-    return "{} is a number".format(n, type(n) == int)
+    if n.isdigit():
+        return "{} is a number".format(n)
+    else:
+        return "404", 404
 
 
 if __name__ == '__main__':
