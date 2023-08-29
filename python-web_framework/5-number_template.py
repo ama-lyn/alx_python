@@ -7,7 +7,7 @@ It defines routes and handlers for different URLs to demonstrate
 the basic usage of the Flask web framework.
 """
 
-from flask import Flask
+from flask import Flask, render_template
 
 app = Flask(__name__)
 
@@ -98,10 +98,8 @@ def number_template_n(n):
     Returns:
         str: HTML page with the H1 tag.
     """
-    if n.isdigit():
-        return render_template('5-number.html', n=n)
-    else:
-        return "404", 404
+
+    return render_template('5-number.html', n=n)
 
 
 if __name__ == '__main__':
