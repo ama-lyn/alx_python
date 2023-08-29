@@ -1,7 +1,8 @@
 #!/usr/bin/python3
 
 """
-This module starts a web aplication using Flask
+This module starts a Flask web application using routes for specific URLs.
+
 It defines routes and handlers for different URLs to demonstrate
 the basic usage of the Flask web framework.
 """
@@ -23,7 +24,7 @@ def hello():
 
 
 @app.route('/hbnb', strict_slashes=False)
-def hello():
+def hbnb():
     """
     A route handler for the URL '/hbnb'. It returns a message "HBNB".
 
