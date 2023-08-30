@@ -119,10 +119,13 @@ def odd_or_even(n):
            str: HTML page with the H1 tag.
     """
 
-    if n % 2 == 0:
-        return render_template('6-number_odd_or_even.html', n=n, status='even')
+    if isinstance(n, int):
+        if n % 2 == 0:
+            return render_template('6-number_odd_or_even.html', n=n, status='even')
+        else:
+            return render_template('6-number_odd_or_even.html', n=n, status='odd')
     else:
-        return render_template('7-number_odd_or_even.html', n=n, status='odd')
+        return "404 Not Found", 404
 
 
 if __name__ == '__main__':
