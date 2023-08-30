@@ -126,7 +126,7 @@ def odd_or_even(n):
         else:
             return render_template('6-number_odd_or_even.html', n=n, status='odd')
     except ValueError:  # n is not a valid number
-        return "Invalid input: n must be an integer", 400
+        return "404 Not Found", 404
 
 
 if __name__ == '__main__':
