@@ -106,7 +106,7 @@ def number_template_n(n):
         return "404 Not Found", 404
 
 
-@app.route('/number_odd_or_even/<n>', strict_slashes=False)
+@app.route('/number_odd_or_even/<n>')
 def odd_or_even(n):
     """ 
     A route handler for the URL '/number_odd_or_even/<n>'. 
