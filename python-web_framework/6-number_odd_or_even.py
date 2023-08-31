@@ -120,11 +120,11 @@ def odd_or_even(n):
     """
 
     try:
-        n = int(n)  # convert n to an integer
-        if n % 2 == 0:
-            return render_template('6-number_odd_or_even.html', n=n, status='even')
+        n_int = int(n)  # convert n to an integer
+        if n_int % 2 == 0:
+            return render_template('6-number_odd_or_even.html', n=n_int, status='even')
         else:
-            return render_template('6-number_odd_or_even.html', n=n, status='odd')
+            return render_template('6-number_odd_or_even.html', n=n_int, status='odd')
     except ValueError:  # n is not a valid number
         return "404 Not Found", 404
 
