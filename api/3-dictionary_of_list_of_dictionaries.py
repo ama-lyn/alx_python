@@ -14,7 +14,7 @@ if __name__ == "__main__":
     base_url = "https://jsonplaceholder.typicode.com"
 
     # Fetch data for all employees
-    employee_data = []
+    employee_data = {}
     for employee_id in range(1, 11):  # Assuming employee IDs range from 1 to 10
         employee_url = "{}/users/{}".format(base_url, employee_id)
         employee_response = requests.get(employee_url)
@@ -33,14 +33,11 @@ if __name__ == "__main__":
         # Prepare data for JSON export
         user_tasks = []
         for task in todo_data:
-            task_data = {
-                "username": employee_name,
-                "task": task.get("title"),
-                "completed": task.get("completed")
-            }
+            task_data = {"username": employee_name,
+                         "task": task['title'], "completed": task['completed']}
             user_tasks.append(task_data)
 
-        employee_data.append({employee_id: user_tasks})
+        employee_data[employee_id] = user_tasks
 
     # Create a JSON file for all employees' tasks
     output_filename = "todo_all_employees.json"
