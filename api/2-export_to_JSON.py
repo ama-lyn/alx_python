@@ -1,8 +1,8 @@
+#!/usr/bin/python3
 """ Uses a REST API, fetching data about a given employee
     (identified by their id passed to sript as argument) &
     exports the data (of all tasks owned by user) in the JSON format
 """
-
 # Import required modules
 import json
 import requests
