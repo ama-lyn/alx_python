@@ -3,12 +3,14 @@
     exports the data (of all tasks owned by user) in the JSON format
 """
 
+# Import required modules
 import json
 import requests
 import sys
 
-
+# Base URL for the REST API
 base_url = "https://jsonplaceholder.typicode.com"
+# Get the employee ID from the command-line argument
 employee_id = sys.argv[1]
 
 # Fetch employee details
