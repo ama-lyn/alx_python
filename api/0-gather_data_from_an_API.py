@@ -12,7 +12,7 @@ employee_data = employee_response.json()
 
 if 'name' not in employee_data:
     print("Employee not found.")
-    sys.exit[1]
+    sys.exit(1)
 
 employee_name = employee_data.get('name')
 
@@ -32,15 +32,5 @@ print("Employee {} is done with tasks ({}/{}):".format(employee_name,
 # Display completed task titles
 for task in todo_data:
     if task['completed']:
-        print("\t{}".format(task['title']))
-
-if __name__ == "__main__":
-    if len(sys.argv) != 2:
-        print("Usage: python script.py <employee_id>")
-        sys.exit(1)
-
-    try:
-        employee_id = int(sys.argv[1])
-    except ValueError:
-        print("Invalid employee ID. Please provide a valid integer.")
-        sys.exit(1)
+        formatted_task_title = "\t{}".format(task['title']).strip()
+        print(formatted_task_title)
