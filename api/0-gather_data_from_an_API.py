@@ -32,5 +32,5 @@ print("Employee {} is done with tasks ({}/{}):".format(employee_name,
 # Display completed task titles
 for task in todo_data:
     if task.get("completed"):
-        formatted_task_title = "\t{}".format(task.get("title"))
+        formatted_task_title = "\t{} ".format(task.get("title"))
         print(formatted_task_title)
