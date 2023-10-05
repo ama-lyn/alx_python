@@ -1,3 +1,9 @@
+""" Uses a REST API, fetching data about a given employee
+    (identified by their id passed in as an arg).
+    Returns:
+            information about thir TODO list progress
+"""
+
 import requests
 import sys
 
@@ -26,7 +32,7 @@ total_tasks = len(todo_data)
 completed_tasks = sum(1 for task in todo_data if task.get("completed"))
 
 # Display progress
-print("Employee {} is done with tasks ({}/{}):".format(employee_name,
+print("Employee {} is done with tasks({}/{}):".format(employee_name,
       completed_tasks, total_tasks))
 
 # Display completed task titles
