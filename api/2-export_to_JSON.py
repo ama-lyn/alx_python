@@ -60,4 +60,4 @@ if __name__ == "__main__":
     # Create a JSON file
     output_filename = "{}.json".format(employee_id)
     with open(output_filename, 'w') as json_file:
-        json.dump({employee_id: user_tasks}, json_file, indent=4)
+        json.dump({employee_id: user_tasks}, json_file)
