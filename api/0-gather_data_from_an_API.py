@@ -23,7 +23,7 @@ todo_data = todo_response.json()
 
 # Calculate progress
 total_tasks = len(todo_data)
-completed_tasks = sum(1 for task in todo_data if task['completed'])
+completed_tasks = sum(1 for task in todo_data if task.get("completed"))
 
 # Display progress
 print("Employee {} is done with tasks ({}/{}):".format(employee_name,
