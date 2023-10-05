@@ -8,13 +8,13 @@ employee_id = sys.argv[1]
 # Fetch employee details
 employee_url = "{}/users/{}".format(base_url, employee_id)
 employee_response = requests.get(employee_url)
-employee_data = employee_response.json().get("name")
+employee_data = employee_response.json()
 
 if 'name' not in employee_data:
     print("Employee not found.")
     sys.exit[1]
 
-employee_name = employee_data['name']
+employee_name = employee_data.get('name')
 
 # Fetch employee's TODO list
 todo_url = "{}/users/{}/todos".format(base_url, employee_id)
