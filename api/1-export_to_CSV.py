@@ -49,8 +49,8 @@ with open(file_name, mode='w', newline='',) as csv_file:
                             quotechar='"', quoting=csv.QUOTE_ALL)
 
     # header
-    csv_writer.writerow(
-        ['USER_ID', 'USERNAME', 'TASK_COMPLETED_STATUS', 'TASK_TITLE'])
+    # csv_writer.writerow(
+    # ['USER_ID', 'USERNAME', 'TASK_COMPLETED_STATUS', 'TASK_TITLE'])
 
     # write each csv row
     for task in todo_data:
