@@ -21,7 +21,7 @@ if __name__ == "__main__":
         employee_info = employee_response.json()
 
         if 'name' in employee_info:
-            employee_name = employee_info.get('name')
+            employee_name = employee_info.get('username')
         else:
             continue  # Skip this employee if 'name' is not present
 
