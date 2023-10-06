@@ -21,7 +21,7 @@ if __name__ == "__main__":
         print("Employee not found.")
         sys.exit(1)
 
-    employee_name = employee_data.get('name')
+    employee_username = employee_data.get('name')
 
     # Fetch employee's TODO list
     todo_url = "{}/users/{}/todos".format(base_url, employee_id)
@@ -33,7 +33,7 @@ if __name__ == "__main__":
     completed_tasks = sum(1 for task in todo_data if task.get("completed"))
 
     # Display progress
-    print("Employee {} is done with tasks({}/{}):".format(employee_name,
+    print("Employee {} is done with tasks({}/{}):".format(employee_username,
                                                           completed_tasks, total_tasks))
 
     # Display completed task titles
@@ -54,5 +54,5 @@ if __name__ == "__main__":
 
         # write each csv row
         for task in todo_data:
-            csv_writer.writerow([employee_id, employee_name,
+            csv_writer.writerow([employee_id, employee_username,
                                 task['completed'], task['title']])
