@@ -25,7 +25,7 @@ if __name__ == "__main__":
         print("Employee not found.")
         sys.exit(1)
 
-    employee_name = employee_data.get('name')
+    employee_name = employee_data.get('username')
 
     # Fetch employee's TODO list
     todo_url = "{}/users/{}/todos".format(base_url, employee_id)
